@@ -25,7 +25,7 @@ export default function Post({
 					</div>
 					<div>
 						<div className="font-medium">{userName}</div>
-						<div className="text-sm -translate-y-1 opacity-80">
+						<div className="text-sm -translate-y-1 opacity-80 -z-50">
 							{timestamp}
 						</div>
 					</div>

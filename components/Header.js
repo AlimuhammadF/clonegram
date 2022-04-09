@@ -22,10 +22,10 @@ export default function Header() {
 	};
 
 	return (
-		<div className="fixed">
+		<div className="fixed z-50">
 			{user ? (
 				<div
-					className="fixed bottom-0 md:hidden left-0 py-3 w-screen
+					className="z-50 fixed bottom-0 md:hidden left-0 py-3 w-screen
                  flex justify-between px-5 border-t border-black border-opacity-20 drop-shadow-sm bg-white"
 				>
 					<button onClick={() => Router.push("/")}>
