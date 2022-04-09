@@ -5,15 +5,13 @@ import {
 	signOut,
 } from "firebase/auth";
 import Router from "next/router";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 import { auth } from "../firebase/firebase";
 
 const AuthContext = createContext({
 	user: null,
 	loading: true,
 	googleSignin: () => {},
-	emailSignup: () => {},
-	emailSignin: () => {},
 	logout: () => {},
 });
 

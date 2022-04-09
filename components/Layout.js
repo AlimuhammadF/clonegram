@@ -1,7 +1,12 @@
 import Head from "next/head";
+import { useContext, useEffect } from "react";
+import ModalContext from "../context/ModalContext";
 import Header from "./Header";
+import Modal from "./Modal";
 
 export default function Layout({ children }) {
+	const { modal } = useContext(ModalContext);
+
 	return (
 		<div>
 			<Head>
@@ -12,8 +17,12 @@ export default function Layout({ children }) {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="defaultFont bg-gray-100 min-h-screen">
+			<main
+				style={{ overflow: "hidden" }}
+				className={`defaultFont min-h-screen overflow-x-hidden`}
+			>
 				<Header />
+				{modal ? <Modal /> : ""}
 				{children}
 			</main>
 		</div>
