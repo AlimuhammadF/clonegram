@@ -77,19 +77,13 @@ export default function Modal() {
 	}
 
 	return (
-		<>
+		<div>
 			{errorCode ? (
 				<Error error={errorCode} cancelError={cancelError} />
 			) : (
 				""
 			)}
-			<button
-				style={{ right: "2%", top: "2%" }}
-				className="fixed z-50 text-white"
-				onClick={logoutHandleModel}
-			>
-				<PlusIcon className="w-8 h-8 md:h-14 md:w-14 rotate-45" />
-			</button>
+
 			<div className="h-screen w-screen fixed flex justify-center items-center px-5">
 				<div
 					onClick={logoutHandleModel}
@@ -147,6 +141,6 @@ export default function Modal() {
 					</div>
 				</motion.div>
 			</div>
-		</>
+		</div>
 	);
 }
