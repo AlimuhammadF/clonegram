@@ -33,7 +33,7 @@ export async function getServerSideProps(context) {
 			post.push({
 				...doc.data(),
 				id: doc.id,
-				timestamp: doc.data().timestamp.toDate().getTime(),
+				timestamp: doc.data().timestamp.toDate().toDateString(),
 			});
 		});
 

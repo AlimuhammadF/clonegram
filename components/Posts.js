@@ -13,6 +13,7 @@ export default function Posts({ postProps }) {
 						image={data.image}
 						userName={data.userName}
 						userUid={data.userUid}
+						timestamp={data.timestamp}
 					/>
 				))}
 			</div>
